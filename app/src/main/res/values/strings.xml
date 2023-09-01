@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
+    <string name="tImputWord">Ingrese una cadena de palabras</string>
+    <string name="btnCompare">Comparar</string>
+    <string name="distinctStrings">Las cadenas son distintas</string>
+    <string name="sameStrings">Las cadenas son distintas</string>
 </resources>

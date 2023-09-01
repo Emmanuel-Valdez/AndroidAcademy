@@ -4,49 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity"
+    android:background="@color/background">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:orientation="vertical"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="228dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/et1"
-            android:layout_height="30dp"
-            android:layout_margin="16dp"
-            android:background="@color/cardview_dark_background"
-            android:text="Ingrese una palabra a comparar"
-            app:layout_constraintBottom_toTopOf="@id/et2"
-            >
-
-        </com.google.android.material.textfield.TextInputEditText>
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:id="@+id/et2"
-            android:layout_height="30dp"
-            android:layout_margin="16dp"
-            android:background="@color/black"
-            android:text="Ingrese una palabra a comparar"
-            app:layout_constraintBottom_toTopOf="@id/tvComparacion"
-            >
-
-        </com.google.android.material.textfield.TextInputEditText>
-
         <TextView
+            android:id="@+id/tvResultado"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:layout_margin="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Hello World!"
-            android:id="@+id/tvComparacion"
+            android:text=""
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/etext1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@color/backgroundInput"
+            android:hint="@string/tImputWord"
+            app:layout_constraintBottom_toTopOf="@id/etext2"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etext2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:background="@color/backgroundInput"
+            android:hint="@string/tImputWord"
+            app:layout_constraintBottom_toTopOf="@id/tvResultado"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnCompare"
+            android:id="@+id/btnComparar"
+            android:layout_marginBottom="200dp"/>
+
+
+
     </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
